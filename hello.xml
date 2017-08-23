@@ -27,7 +27,13 @@
         <context>
         <input pattern="$Text">
         <var name="Password" value="$Text" scope="user"/>
-        <output value="Thanks you entered all data"/>
+        <output value="Enter Instance Name"/>
+        <context>
+         <input pattern="$Text">
+        <var name="Instance" value="$Text" scope="user"/>
+        <output value="Thanks for you input"/>
+        </input>
+        </context>
       </input>
       </context>
       </input>
