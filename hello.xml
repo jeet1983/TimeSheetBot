@@ -3,7 +3,7 @@
   <output value="Hi! What is your favorite color?"/>
 
   <context>
-    <input pattern="* $Color"/>
+    <input pattern="*"/>
     <sample>
       <item>Green</item>
       <item>Blue</item>
