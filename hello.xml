@@ -9,6 +9,7 @@
       <item>Red</item>
     </sample>
     <input pattern="* $Color *">
+      <var name="UserName" value="$Color" scope="user"/>
       <output value="Nice! I like it too!"/>
     </input>
   </context>
