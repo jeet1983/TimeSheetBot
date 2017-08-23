@@ -20,14 +20,18 @@
     <input pattern="$Text">
       <var name="Action1" value="$Text" scope="user"/>
       <output value="You chosse $Action1.Please enter username"/>
+      <context>
       <input pattern="$Text">
         <var name="UserName" value="$Text" scope="user"/>
         <output value="Please Enter Password"/>
+        <context>
         <input pattern="$Text">
         <var name="Password" value="$Text" scope="user"/>
         <output value="Thanks you entered all data"/>
       </input>
+      </context>
       </input>
+      </context>
       </input>
     </context>
     
