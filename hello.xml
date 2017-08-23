@@ -13,13 +13,14 @@
       <output value="Nice! I will help you with  $Action too! At this moment I can answer only these"/>
       <context>
     <sample>
-      <item>Query Incidents</item>
-      <item>Query Leads</item>
-      <item>Query Accounts</item>
+      <item>P1</item>
+      <item>P2</item>
+      <item>P3</item>
     </sample>
     <input pattern="$Text">
       <var name="Action1" value="$Text" scope="user"/>
       <output value="You chosse $Action1"/>
+      <output value="Please enter username"/>
       </input>
     </context>
     
