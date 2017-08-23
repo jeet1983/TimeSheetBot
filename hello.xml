@@ -1,16 +1,16 @@
 <context>
 <input pattern="(hi|hello) *">
-  <output value="Hi! What is your favorite color?"/>
+  <output value="Hi! How Can I Help you today ? I can provide following information-"/>
 
   <context>
     <sample>
-      <item>Green</item>
-      <item>Blue</item>
-      <item>Red</item>
+      <item>Query Incidents</item>
+      <item>Query Leads</item>
+      <item>Query Accounts</item>
     </sample>
     <input pattern="$Text">
-      <var name="UserName" value="$Text" scope="user"/>
-      <output value="Nice! I like $Text too!"/>
+      <var name="Action" value="$Text" scope="user"/>
+      <output value="Nice! I will help you with  $Action too!"/>
     </input>
   </context>
 </input>
