@@ -17,6 +17,10 @@
       <item>Query Leads</item>
       <item>Query Accounts</item>
     </sample>
+    <input pattern="$Text">
+      <var name="Action1" value="$Text" scope="user"/>
+      <output value="You chosse $Action1"/>
+     
     </context>
     </input>
   </context>
