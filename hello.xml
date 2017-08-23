@@ -31,7 +31,7 @@
         <context>
          <input pattern="$Text">
         <var name="Instance" value="$Text" scope="user"/>
-        <output value="Thanks for you input"/>
+        <output value="Thanks for you input you enter UserName-$UserName Password=$Password and Instance=$Instance"/>
         </input>
         </context>
       </input>
