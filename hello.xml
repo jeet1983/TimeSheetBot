@@ -10,7 +10,15 @@
     </sample>
     <input pattern="$Text">
       <var name="Action" value="$Text" scope="user"/>
-      <output value="Nice! I will help you with  $Action too!"/>
+      <output value="Nice! I will help you with  $Action too! At this moment I can answer only these"/>
+      
+      <context>
+        <sample>
+      <item>P1 Incidents</item>
+      <item>P2 Incidents</item>
+      <item>P3 Incidents</item>
+    </sample>
+      </context>
     </input>
   </context>
 </input>
