@@ -1,6 +1,6 @@
 <context>
 <input pattern="(hi|hello) *">
-  <output value="Hi! How Can I Help you today ? I can provide following information-"/>
+  <output value="Hi!Hello How Can I Help you today ? I can provide following information-"/>
 
   <context>
     <sample>
