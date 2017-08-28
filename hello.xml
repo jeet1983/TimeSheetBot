@@ -24,7 +24,8 @@
        <context>
      <input pattern="$Text">
       <var name="crAction" value="$Text" scope="user"/>
-       <context id="weather"/> 
+       <context id="weather" if="eq($crAction,'exit')"/> 
+       <output value="You chosse $crAction"/>
     </input>
        </context>
     <output value=" Nice $UserName! you wanna Query something .. Cool" if="full($queryAction)"/>
