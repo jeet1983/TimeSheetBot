@@ -10,7 +10,7 @@
       <item>Query Something</item>
     </sample>
     <context>
-     <input pattern="$Text">
+     <input pattern="(Create|Query) *">
       <var name="Action" value="$Text" scope="user"/>
       <var name="createAction" value="javascript: getuserCInput($Action)" scope="user"/>
       <var name="queryAction" value="javascript: getuserQInput($Action)" scope="user"/>
