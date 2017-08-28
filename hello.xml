@@ -13,15 +13,8 @@
     <context>
      <input pattern="$Text">
       <var name="Action" value="$Text" scope="user"/>
-      <var name="userInput">
-    <script>
-      <![CDATA[
-        var result = 'nana';
-        result;
-      ]]>
-    </script>
-  </var>
-       <output value="Nice! you selected $userInput"/>
+      <var name="filteredAction" value="javascript: getuserInput($Action)"/>
+       <output value="Nice! you selected $filteredAction"/>
        </input>
        </context>
 </input>
