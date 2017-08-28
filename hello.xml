@@ -24,7 +24,7 @@
        <context>
      <input pattern="{$Text} *">
       <var name="crAction" value="$Text" scope="user"/>
-      <output value="You chosse $Action1"/>
+      <output value="You chosse $crAction"/>
     </input>
        </context>
     <output value=" Nice $UserName! you wanna Query something .. Cool" if="full($queryAction)"/>
