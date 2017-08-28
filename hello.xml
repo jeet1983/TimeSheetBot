@@ -37,8 +37,5 @@
 </input>
 </context>
 </input>
-  <context id="exit">
-  <!-- Does some weather gathering stuff -->
-  <output value="Have a nice day"/>
-</context>
+ 
 </context>
