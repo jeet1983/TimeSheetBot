@@ -11,47 +11,5 @@
       <item>Query Accounts</item>
     </sample>
 </input>
-<!--</context>
-  <context>-->
-    <sample>
-      <item>Query Incidents</item>
-      <item>Query Leads</item>
-      <item>Query Accounts</item>
-    </sample>
-    <input pattern="$Text">
-      <var name="Action" value="$Text" scope="user"/>
-      <output value="Nice! I will help you with  $Action too! At this moment I can answer only these"/>
-      <context>
-    <sample>
-      <item>P1</item>
-      <item>P2</item>
-      <item>P3</item>
-    </sample>
-    <input pattern="$Text">
-      <var name="Action1" value="$Text" scope="user"/>
-      <output value="You chosse $Action1.Please enter username"/>
-      <context>
-      <input pattern="$Text">
-        <var name="UserName" value="$Text" scope="user"/>
-        <output value="Please Enter Password"/>
-        <context>
-        <input pattern="$Text">
-        <var name="Password" value="$Text" scope="user"/>
-        <output value="Enter Instance Name"/>
-        <context>
-         <input pattern="$Text">
-        <var name="Instance" value="$Text" scope="user"/>
-        <output value="Thanks for you input you enter UserName-$UserName Password=$Password and Instance=$Instance"/>
-        </input>
-        </context>
-      </input>
-      </context>
-      </input>
-      </context>
-      </input>
-    </context>
-    
-    </input>
-  </context>
-</input>
+</context>
 </context>
