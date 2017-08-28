@@ -34,7 +34,13 @@
       <item>Query Leads Created By You</item>
       <item>Query Campaigns created by you</item>
     </sample>
-  
+  <context>
+     <input pattern="$Text">
+      <var name="qrAction" value="$Text" scope="user"/>
+       <context if='has($qrAction, "Lead")' id="qrlead"/> 
+       <context if='has($qrAction, "Campaign")' id="qrcamp"/> 
+    </input>
+       </context>
        </input>
        </context>
 </input>
@@ -46,6 +52,16 @@
   <context id="crcamp">
   <!-- Does some weather gathering stuff -->
   <output value="Creating campaign"/>
+</context>
+  </context>
+   <context id="qrlead">
+  <!-- Does some weather gathering stuff -->
+  <output value="Query lead $qrAction"/>
+</context>
+  </context>
+   <context id="qrcampgn">
+  <!-- Does some weather gathering stuff -->
+  <output value="Query Campaign $qrAction"/>
 </context>
 </input>
  
