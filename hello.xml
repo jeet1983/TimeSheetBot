@@ -24,7 +24,6 @@
        <context>
      <input pattern="$Text">
       <var name="crAction" value="$Text" scope="user"/>
-       <context id="weather" if="eq($crAction,'exit')"/> 
        <output value="You chosse $crAction"/>
     </input>
        </context>
