@@ -21,7 +21,13 @@
       <item>Create a Lead</item>
       <item>Create a Campaign</item>
     </sample>
-    
+    <output value=" Nice $UserName! you wanna Query something .. Cool" if="full($queryAction)"/>
+     
+    <sample>
+      <item>Query Leads Created By You</item>
+      <item>Query Campaigns created by you</item>
+    </sample>
+  
        </input>
        </context>
 </input>
