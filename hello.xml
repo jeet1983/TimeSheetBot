@@ -24,7 +24,7 @@
        <context>
      <input pattern="$Text">
       <var name="crAction" value="$Text" scope="user"/>
-       <context if="has('Hello guys', 'ell')" id="crlead"/> 
+       <context if='has("Hello guys", "ell")' id="crlead"/> 
     </input>
        </context>
     <output value=" Nice $UserName! you wanna Query something .. Cool" if="full($queryAction)"/>
