@@ -24,7 +24,7 @@
        <context>
      <input pattern="$Text">
       <var name="crAction" value="$Text" scope="user"/>
-       <context if="eq($crAction,'Create a Lead')" id="crlead"/> 
+       <context if="has($crAction,"Lead")" id="crlead"/> 
     </input>
        </context>
     <output value=" Nice $UserName! you wanna Query something .. Cool" if="full($queryAction)"/>
