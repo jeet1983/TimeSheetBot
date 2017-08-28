@@ -13,8 +13,8 @@
      <input pattern="$Text">
       <var name="Action" value="$Text" scope="user"/>
       <var name="filteredAction" value="javascript: getuserInput($Action)" scope="user"/>
-    
-    <output value=" Nice $UserName! you wanna create something .. Cool" if="has($Action, 'Create')"/>
+     <output value=" Nice $UserName! you wanna create something .. Cool $filteredAction"/>
+   
        </input>
        </context>
 </input>
