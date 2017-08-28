@@ -13,7 +13,17 @@
     <context>
      <input pattern="$Text">
       <var name="Action" value="$Text" scope="user"/>
-       <output value="Nice! you selected $Action"/>
+      <var name="userInput">
+    <script>
+      <![CDATA[
+        var result = 'nana';
+       if(Action=='hi')
+         result='bye';
+        result;
+      ]]>
+    </script>
+  </var>
+       <output value="Nice! you selected $userInput"/>
        </input>
        </context>
 </input>
