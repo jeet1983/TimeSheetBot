@@ -10,10 +10,12 @@
       <item>Query Leads</item>
       <item>Query Accounts</item>
     </sample>
+    <context>
      <input pattern="$Text">
       <var name="Action" value="$Text" scope="user"/>
        <output value="Nice! you selected $Action"/>
        </input>
+       </context>
 </input>
 </context>
 </input>
