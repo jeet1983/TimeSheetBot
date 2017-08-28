@@ -1,87 +1,42 @@
 <context>
-
 <input pattern="*">
-
-<output value="Hi There! I am Snowy, your personal Digital Assistent for SNOW Marketing applications. Please Enter your name?"/>
-
-<context>
-
-<input pattern="$Text">
-
-<var name="UserName"
-value="$Text"
-scope="user"/>
-
-<output value="Nice to meet you $UserName!. I can help you with the following"/>
-
-<sample>
-
-<item>Create Something</item>
-
-<item>Query Something</item>
-
-</sample>
-
-<context>
-
-<input pattern="{$Text} *">
-
-<var name="Action"
-value="$Text"
-scope="user"/>
-
-<var name="createAction"
-value="javascript: getuserCInput($Action)"
-scope="user"/>
-
-<var name="queryAction"
-value="javascript: getuserQInput($Action)"
-scope="user"/>
-
-
-<output value=" Nice $UserName! you wanna create something .. Cool I can help with following"
-if="full($createAction)"/>
-
-
-<sample if="full($createAction)">
-
-<item>Create a Lead</item>
-
-<item>Create a Campaign</item>
-
-</sample>
-
-<input pattern="{$Text} *">
-
-<var name="crAction"
-value="$Text"
-scope="user"/>
-
-<output value="You chosse $Action1"/>
-
+  <output value="Hi There! I am Snowy, your personal Digital Assistent for SNOW Marketing applications. Please Enter your name?"/>
+  <context>
+  <input pattern="$Text">
+        <var name="UserName" value="$Text" scope="user"/>
+        <output value="Nice to meet you $UserName!. I can help you with the following"/>
+        <sample>
+      <item>Create Something</item>
+      <item>Query Something</item>
+    </sample>
+    <context>
+     <input pattern="{$Text} *">
+      <var name="Action" value="$Text" scope="user"/>
+      <var name="createAction" value="javascript: getuserCInput($Action)" scope="user"/>
+      <var name="queryAction" value="javascript: getuserQInput($Action)" scope="user"/>
+    
+    <output value=" Nice $UserName! you wanna create something .. Cool I can help with following" if="full($createAction)"/>
+    
+    <sample if="full($createAction)">
+      <item>Create a Lead</item>
+      <item>Create a Campaign</item>
+    </sample>
+       <context>
+     <input pattern="$Text">
+      <var name="crAction" value="$Text" scope="user"/>
+      <output value="You chosse $crAction"/>
+    </input>
+       </context>
+    <output value=" Nice $UserName! you wanna Query something .. Cool" if="full($queryAction)"/>
+     
+    <sample if="full($queryAction)">
+      <item>Query Leads Created By You</item>
+      <item>Query Campaigns created by you</item>
+    </sample>
+  
+       </input>
+       </context>
 </input>
-
-<output value=" Nice $UserName! you wanna Query something .. Cool"
-if="full($queryAction)"/>
-
-
-<sample if="full($queryAction)">
-
-<item>Query Leads Created By You</item>
-
-<item>Query Campaigns created by you</item>
-
-</sample>
-
-
-</input>
-
 </context>
-
 </input>
-
-</context>
-
-</input>
-
 </context>
