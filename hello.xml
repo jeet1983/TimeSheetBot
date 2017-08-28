@@ -22,7 +22,7 @@
       <item>Create a Campaign</item>
     </sample>
        <context>
-     <input pattern="{$Text} *">
+     <input pattern="$Text">
       <var name="crAction" value="$Text" scope="user"/>
       <output value="You chosse $crAction"/>
     </input>
