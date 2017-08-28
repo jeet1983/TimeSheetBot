@@ -24,8 +24,7 @@
        <context>
      <input pattern="$Text">
       <var name="crAction" value="$Text" scope="user"/>
-       <context id="crlead" if="eq($crAction,'Create a Lead')"/> 
-       <context id="crcamp" if="eq($crAction,'Create a Campaign')"/> 
+       <context id="crlead"/> 
     </input>
        </context>
     <output value=" Nice $UserName! you wanna Query something .. Cool" if="full($queryAction)"/>
@@ -41,7 +40,7 @@
 </context>
    <context id="crlead">
   <!-- Does some weather gathering stuff -->
-  <output value="Creating lead"/>
+  <output value="Creating lead $crAction"/>
 </context>
   <context id="crcamp">
   <!-- Does some weather gathering stuff -->
