@@ -21,6 +21,10 @@
       <item>Create a Lead</item>
       <item>Create a Campaign</item>
     </sample>
+     <input pattern="{$Text} *">
+      <var name="crAction" value="$Text" scope="user"/>
+      <output value="You chosse $Action1"/>
+    </input>
     <output value=" Nice $UserName! you wanna Query something .. Cool" if="full($queryAction)"/>
      
     <sample if="full($queryAction)">
@@ -33,4 +37,3 @@
 </input>
 </context>
 </input>
-</context>
