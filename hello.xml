@@ -1,5 +1,5 @@
 <context>
-  <input pattern="*">
+<input pattern="*">
   <output value="Hi There! I am Snowy, your personal Digital Assistent for SNOW Marketing applications. Please Enter your name?"/>
   <context>
   <input pattern="$Text">
@@ -37,5 +37,4 @@
 </input>
 </context>
 </input>
- 
 </context>
