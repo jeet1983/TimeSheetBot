@@ -14,7 +14,7 @@
       <var name="Action" value="$Text" scope="user"/>
       <var name="filteredAction" value="javascript: getuserInput($Action)"/>
     
-       <output value=" Nice $UserName! you wanna create something .. Cool $filteredAction"/>
+    <output value=" Nice $UserName! you wanna create something .. Cool" if=eq($filteredAction, 'Create')/>
        </input>
        </context>
 </input>
