@@ -17,8 +17,6 @@
     <script>
       <![CDATA[
         var result = 'nana';
-       if(Action=='hi')
-         result='bye';
         result;
       ]]>
     </script>
