@@ -1,9 +1,9 @@
 function getuserInput(txt) {
-  var rettxt='';
+  var rettxt=1;
  if(txt.indexOf('Create')!=-1)
-    rettxt='Create';
+    rettxt=1;
  if(txt.indexOf('Query')!=-1)
-    rettxt='Query';
+    rettxt=2;
   return rettxt;
 }
 
