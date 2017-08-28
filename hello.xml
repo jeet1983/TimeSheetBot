@@ -16,19 +16,19 @@
       <var name="queryAction" value="javascript: getuserQInput($Action)" scope="user"/>
     
     <output value=" Nice $UserName! you wanna create something .. Cool I can help with following" if="full($createAction)"/>
-    <context>
+    
     <sample>
       <item>Create a Lead</item>
       <item>Create a Campaign</item>
     </sample>
-    </<context>>
+    
     <output value=" Nice $UserName! you wanna Query something .. Cool" if="full($queryAction)"/>
-      <context>
+     
     <sample>
       <item>Query Leads Created By You</item>
       <item>Query Campaigns created by you</item>
     </sample>
-    </<context>>
+   
        </input>
        </context>
 </input>
