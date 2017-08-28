@@ -1,7 +1,9 @@
 <context>
+  <context>
 <input pattern="Exit">
   <output value="Thanks Wish you a good day"/>
 </input>
+    </context>
 <input pattern="*">
   <output value="Hi There! I am Snowy, your personal Digital Assistent for SNOW Marketing applications. Please Enter your name?"/>
   <context>
