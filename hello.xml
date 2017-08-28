@@ -39,4 +39,8 @@
 </input>
 </context>
 </input>
+  <context id="weather">
+  <!-- Does some weather gathering stuff -->
+  <output value="The weather in $UserCity is pretty good!"/>
+</context>
 </context>
