@@ -101,7 +101,9 @@
       }
     ]]></body>
                     </post>
-                    <output value="Creating campaign $Response" />
+                    <var name="testCaseNo" value="javascript: Response.result.unumber"/>
+                    
+                    <output value="Created Test Case $testCaseNo" />
                 </context>
                 <context id="qrlead">
                     <!-- Does some weather gathering stuff -->
