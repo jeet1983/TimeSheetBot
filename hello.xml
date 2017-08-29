@@ -45,12 +45,16 @@
                     <output value="Creating lead $crAction" />
                 </context>
                 <context id="crcamp">
-                    <context id="shortdesc" />
-                </context>
-                <context id="shortdesc">
                     <output value="Please enter short description" />
                     <input pattern="$Text">
-                        <var name="UserName" value="$shotdesc" scope="user" />
+                        <var name="shortdesc" value="$Text" scope="user" />
+                         <context id="detdesc" />
+                    </input>
+                </context>
+                <context id="detdesc">
+                    <output value="Please enter detail description" />
+                    <input pattern="$Text">
+                        <var name="detdesc" value="$Text" scope="user" />
                     </input>
                 </context>
                 <context id="qrlead">
