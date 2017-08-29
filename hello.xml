@@ -87,13 +87,10 @@
                     </input>
                 </context>
                 <context id="datapostmessage">
-                    <output value="Creating Test Case... Hold on tight :)" />
-                    <context id="datapost" />
-                    <context id="datapost">
-                        <post url="https://qacentral.service-now.com/api/now/table/u_upload_test_cases" var="Response">
-                            <header name="Content-Type" value="application/json" />
-                            <header name="Authorization" value="Basic YWRtaW46YWRtaW4=" />
-                            <body><![CDATA[
+                    <post url="https://qacentral.service-now.com/api/now/table/u_upload_test_cases" var="Response">
+                        <header name="Content-Type" value="application/json" />
+                        <header name="Authorization" value="Basic YWRtaW46YWRtaW4=" />
+                        <body><![CDATA[
       {
         "u_short_description" : "$shortdesc",
         "u_detailed_description" : "$detdesc",,
@@ -103,9 +100,8 @@
         "u_test_step_name"  : "$teststep",
       }
     ]]></body>
-                        </post>
-                        <output value="Creating campaign $Response" />
-                    </context>
+                    </post>
+                    <output value="Creating campaign $Response" />
                 </context>
                 <context id="qrlead">
                     <!-- Does some weather gathering stuff -->
