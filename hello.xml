@@ -48,14 +48,64 @@
                     <output value="Please enter short description" />
                     <input pattern="$Text">
                         <var name="shortdesc" value="$Text" scope="user" />
-                         <context id="detdesc" />
+                        <context id="detdesc" />
                     </input>
                 </context>
                 <context id="detdesc">
                     <output value="Please enter detail description" />
                     <input pattern="$Text">
                         <var name="detdesc" value="$Text" scope="user" />
+                        <context id="testowner" />
                     </input>
+                </context>
+                <context id="testowner">
+                    <output value="Please enter test owner" />
+                    <input pattern="$Text">
+                        <var name="testowener" value="$Text" scope="user" />
+                        <context id="testprereq" />
+                    </input>
+                </context>
+                <context id="testprereq">
+                    <output value="Please enter test pre requisite" />
+                    <input pattern="$Text">
+                        <var name="testprereq" value="$Text" scope="user" />
+                        <context id="testsuite" />
+                    </input>
+                </context>
+                <context id="testsuite">
+                    <output value="Please enter test suite name" />
+                    <input pattern="$Text">
+                        <var name="testsuite" value="$Text" scope="user" />
+                        <context id="teststep" />
+                    </input>
+                </context>
+                <context id="teststep">
+                    <output value="Please enter test step name" />
+                    <input pattern="$Text">
+                        <var name="teststep" value="$Text" scope="user" />
+                        <context id="datapostmessage" />
+                    </input>
+                </context>
+                <context id="datapostmessage">
+                    <output value="Creating Test Case... Hold on tight :)" />
+                    <context id="datapost" />
+                    <context id="datapost">
+                        <post url="https://qacentral.service-now.com/api/now/table/u_upload_test_cases" var="Response">
+                            <header name="Content-Type" value="application/json" />
+                            <header name="Authorization" value="Basic YWRtaW46YWRtaW4=" />
+                            <body><![CDATA[
+      {
+        "u_short_description" : "$shortdesc",
+        "u_detailed_description" : "$detdesc",,
+        "u_owner" : "$testowener",,
+        "u_prerequisites" : "$testprereq",,
+        "u_test_suite"  : "$testsuite",,
+        "u_test_step_name"  : "$teststep",
+      }
+    ]]></body>
+                        </post>
+                        <output value="Creating campaign $Response" />
+                    </context>
                 </context>
                 <context id="qrlead">
                     <!-- Does some weather gathering stuff -->
