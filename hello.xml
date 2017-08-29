@@ -101,7 +101,7 @@
       }
     ]]></body>
                     </post>
-                    <var name="testCaseNo" value="javascript: $Response.result.unumber"/>
+                    <var name="testCaseNo" value="javascript: $Response.result"/>
                     
                     <output value="Created Test Case $Response -10000- $testCaseNo" />
                 </context>
