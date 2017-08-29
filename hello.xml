@@ -51,17 +51,7 @@
   <context id="crcamp">
   <!-- Does some weather gathering stuff -->
   <output value="Creating campaign"/>
-    <post url="http://someserver.com" var="Response">
-  <header name="Content-Type" value="application/json"/>
-  <body>
-    <![CDATA[
-      {
-        "somevariable" : "somevalue",
-        "referencevariable" : "$MyVar"
-      }
-    ]]>
-  </body>
-</post>
+   
 </context>
   </context>
    <context id="qrlead">
