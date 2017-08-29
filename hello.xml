@@ -50,58 +50,16 @@
 </context>
   <context id="crcamp">
   <!-- Does some weather gathering stuff -->
-    
+    <context>
  <output value="Please enter test short description"/>
+    
       <input pattern="$Text">
         
       <var name="testsdesc" value="$Text" scope="user"/>
       </input>
-     
+    </context>
    
- <output value="Please enter test detailed description"/>
-      <input pattern="$Text">
-      <var name="testddesc" value="$Text" scope="user"/>
-      </input>
-      
-   
-    <output value="Please enter test owner"/>
-    <input pattern="$Text">
-      <var name="testpreeq" value="$Text" scope="user"/>
-      </input>
-       
- <output value="Please enter test prequisite"/>
-    <input pattern="$Text">
-      <var name="testpreeq" value="$Text" scope="user"/>
-      </input>
-     
- <output value="Please enter test suite"/>
-    <input pattern="$Text">
-      <var name="testst" value="$Text" scope="user"/>
-      </input>
-      
- <output value="Please enter test stepname"/>
-    <input pattern="$Text">
-      <var name="teststn" value="$Text" scope="user"/>
-      </input>
-    
-  <post url="https://qacentral.service-now.com/api/now/table/u_upload_test_cases" var="Response">
-  <header name="Content-Type" value="application/json"/>
-  <header name="Authorization" value="Basic YWRtaW46YWRtaW4="/>
-  <body>
-    <![CDATA[
-      {
-        "u_short_description" : "$testsdesc",
-        "u_detailed_description" : "$testddesc",,
-        "u_owner" : "$testpreeq",,
-        "u_prerequisites" : "$testpreeq",,
-        "u_test_suite"  : "$testst",,
-        "u_test_step_name"  : "$teststn",
-      }
-    ]]>
-  </body>
-</post>
-     <output value="Creating campaign $Response"/>
-   
+ 
 </context>
    <context id="qrlead">
   <!-- Does some weather gathering stuff -->
