@@ -50,9 +50,9 @@
 </context>
   <context id="crcamp">
   <!-- Does some weather gathering stuff -->
-    <context>
+   
  <output value="Please enter test short description"/>
-    
+     <context>
       <input pattern="$Text">
         
       <var name="testsdesc" value="$Text" scope="user"/>
