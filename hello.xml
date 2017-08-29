@@ -53,12 +53,11 @@
   <output value="Creating campaign"/>
    
 </context>
-
    <context id="qrlead">
   <!-- Does some weather gathering stuff -->
   <output value="Query lead $qrAction"/>
 </context>
-  </context>
+ 
    <context id="qrcampgn">
   <!-- Does some weather gathering stuff -->
   <output value="Query Campaign $qrAction"/>
