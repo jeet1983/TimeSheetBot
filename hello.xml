@@ -93,11 +93,11 @@
                         <body><![CDATA[
       {
         "u_short_description" : "$shortdesc",
-        "u_detailed_description" : "$detdesc",,
-        "u_owner" : "$testowener",,
-        "u_prerequisites" : "$testprereq",,
-        "u_test_suite"  : "$testsuite",,
-        "u_test_step_name"  : "$teststep",
+        "u_detailed_description" : "$detdesc",
+        "u_owner" : "$testowener",
+        "u_prerequisites" : "$testprereq",
+        "u_test_suite"  : "$testsuite",
+        "u_test_step_name"  : "$teststep"
       }
     ]]></body>
                     </post>
