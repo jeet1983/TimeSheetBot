@@ -50,7 +50,24 @@
 </context>
   <context id="crcamp">
   <!-- Does some weather gathering stuff -->
-  <output value="Creating campaign"/>
+ 
+  <post url="https://qacentral.service-now.com/api/now/table/u_upload_test_cases" var="Response">
+  <header name="Content-Type" value="application/json"/>
+  <header name="Authorization" value="Basic YWRtaW46YWRtaW4="/>
+  <body>
+    <![CDATA[
+      {
+        "u_short_description" : "Test Test",
+        "u_detailed_description" : "From Bot",
+        "u_owner" : "Gopal",
+        "u_prerequisites" : "Pre conditions",
+        "u_test_suite"  : "IT - Asset Management Regression test",
+        "u_test_step_name"  : "Testing fromREST"
+      }
+    ]]>
+  </body>
+</post>
+     <output value="Creating campaign $Response"/>
    
 </context>
    <context id="qrlead">
