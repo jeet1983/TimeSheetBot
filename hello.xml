@@ -52,12 +52,13 @@
   <!-- Does some weather gathering stuff -->
    
  <output value="Please enter test short description"/>
-     <context>
+     
       <input pattern="$Text">
-        
+        <context>
       <var name="testsdesc" value="$Text" scope="user"/>
+          </context>
       </input>
-    </context>
+    
    
  
 </context>
