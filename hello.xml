@@ -56,6 +56,28 @@
       <input pattern="$Text">
         <context>
       <var name="testsdesc" value="$Text" scope="user"/>
+          <output value="Please enter test detailed description"/>
+           <input pattern="$Text">
+             <context>
+                <var name="testddesc" value="$Text" scope="user"/>
+               <post url="https://qacentral.service-now.com/api/now/table/u_upload_test_cases" var="Response">
+  <header name="Content-Type" value="application/json"/>
+  <header name="Authorization" value="Basic YWRtaW46YWRtaW4="/>
+  <body>
+    <![CDATA[
+      {
+        "u_short_description" : "$testsdesc",
+        "u_detailed_description" : "$testddesc",,
+        "u_owner" : "Gopal",
+        "u_prerequisites" : "Test Pre",,
+        "u_test_suite"  : "IT",,
+        "u_test_step_name"  : "IT Step1",
+      }
+    ]]>
+  </body>
+</post>
+               </context>
+           </input>
           </context>
       </input>
     
