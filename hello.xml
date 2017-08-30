@@ -42,7 +42,7 @@
                 </context>
                 <context id="crlead">
                     
-                    <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet?userName=tanu%20dube&weekstartson=2017-08-27" var="tcResponse">
+                    <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet?userName=tanu%20dube%26weekstartson=2017-08-27" var="tcResponse">
                         <header name="Content-Type" value="application/json" />
                        
                     </get>
