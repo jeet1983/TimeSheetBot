@@ -13,7 +13,7 @@
                     <item>Less Than 40 hours</item>
                 </sample>
                 <context>
-                    <input pattern="{$Text}*">
+                    <input pattern="$Text">
                         <var name="Action" value="$Text" scope="user" />
                         <output value=" Got you $UserName! you wanna $Action"/>
                         <context if="has($Action,  &quot;Submitted&quot;)" id="notsubmitted" />
