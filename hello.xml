@@ -1,4 +1,4 @@
-<context>
+<context id="root">
     <input pattern="*">
         <output value="Hi There! I am Snowy, your personal Digital Assistent for SNOW TimeSheet applications. Please Enter your name?" />
         <context>
@@ -15,6 +15,7 @@
                     <input pattern="{$Text} *">
                         <var name="Action" value="$Text" scope="user" />
                         <output value=" Got you $UserName! you wanna $Action"/>
+                        <context id="root" />
                     </input>
                 </context>
             </input>
