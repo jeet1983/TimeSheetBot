@@ -40,12 +40,11 @@
                 <context id="sendEmail">
                       <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet" var="tcResponse">
                         <header name="Content-Type" value="application/json" />
-                       <param name="userName" value="tanu dube"/>
-                        <param name="weekstartson" value="2017-08-27"/>
+                       <param name="type" value="NotSubmitted"/>
                     </get>
                     
                     
-                    <output value="Sent Email $tcResponse" />
+                    <output value="Sent Email" />
                      
                 </context>
             </input>
