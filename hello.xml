@@ -28,7 +28,7 @@
                         <header name="Content-Type" value="application/json" />
                       
                     </get>
-                    <var name="nsResponseresult" value="javascript: $Response.result"/
+                    <var name="nsResponseresult" value="javascript: $Response.result"/>
                     
                     <output value="Not Submitted $nsResponseresult" />
                 </context>
