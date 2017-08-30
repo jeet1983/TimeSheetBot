@@ -16,10 +16,10 @@
                     <input pattern="{$Text} *">
                         <var name="Action" value="$Text" scope="user" />
                         <output value=" Got you $UserName! you wanna $Action"/>
-                        <context if="has($Action, &Submitted;Lead&quot;)" id="notsubmitted" />
-                        <context if="has($Action, &Approved;Lead&quot;)" id="notapproved" />
-                        <context if="has($Action, &Pending;Lead&quot;)" id="Pending" />
-                        <context if="has($Action, &Pending;40&quot;)" id="lessthan40" />
+                        <context if="has($Action, 'Not Submitted')" id="notsubmitted" />
+                        <context if="has($Action, 'Not Approved')" id="notapproved" />
+                        <context if="has($Action, 'Pending')" id="Pending" />
+                        <context if="has($Action, 'Less Than 40 hours')" id="lessthan40" />
                     </input>
                 </context>
                  <context id="notsubmitted">
