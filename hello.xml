@@ -31,7 +31,7 @@
                     <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
                     
                      <output value="$nsResponseresult" />
-                      <input pattern="Eamil *">
+                      <input pattern="*">
                            <context id="sendEmail"/>
                                </input>
                 </context>
