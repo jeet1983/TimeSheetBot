@@ -1,7 +1,6 @@
 <context >
     
     <input pattern="*">
-        <context id="root">
         <output value="Hi There! I am Snowy, your personal Digital Assistent for SNOW TimeSheet applications. Please Enter your name?" />
         <context id="leaf">
             <input pattern="$Text">
@@ -24,7 +23,7 @@
                 </context>
             </input>
         </context>
-            </context>
+           
     </input>
     
 </context>
