@@ -1,124 +1,21 @@
 <context>
     <input pattern="*">
-        <output value="Hi There! I am Snowy, your personal Digital Assistent for SNOW Marketing applications. Please Enter your name?" />
+        <output value="Hi There! I am Snowy, your personal Digital Assistent for SNOW TimeSheet applications. Please Enter your name?" />
         <context>
             <input pattern="$Text">
                 <var name="UserName" value="$Text" scope="user" />
                 <output value="Nice to meet you $UserName!. I can help you with the following" />
                 <sample>
-                    <item>Create Something</item>
-                    <item>Query Something</item>
+                    <item>Not Approved</item>
+                    <item>Not Submitted</item>
+                    <item>Pending</item>
+                    <item>Less Than 40 hours</item>
                 </sample>
                 <context>
                     <input pattern="{$Text} *">
                         <var name="Action" value="$Text" scope="user" />
-                        <var name="createAction" value="javascript: getuserCInput($Action)" scope="user" />
-                        <var name="queryAction" value="javascript: getuserQInput($Action)" scope="user" />
-                        <output value=" Nice $UserName! you wanna create something .. Cool I can help with following" if="full($createAction)" />
-                        <sample if="full($createAction)">
-                            <item>Create a Time Sheet Reminder</item>
-                            <item>Create a Test Case</item>
-                        </sample>
-                        <context>
-                            <input pattern="$Text">
-                                <var name="crAction" value="$Text" scope="user" />
-                                <context if="has($crAction, &quot;Time Sheet Reminder&quot;)" id="crlead" />
-                                <context if="has($crAction, &quot;Test Case&quot;)" id="crcamp" />
-                            </input>
-                        </context>
-                        <output value=" Nice $UserName! you wanna Query something .. Cool" if="full($queryAction)" />
-                        <sample if="full($queryAction)">
-                            <item>Query Leads Created By You</item>
-                            <item>Query Campaigns created by you</item>
-                        </sample>
-                        <context>
-                            <input pattern="$Text">
-                                <var name="qrAction" value="$Text" scope="user" />
-                                <context if="has($qrAction, &quot;Lead&quot;)" id="qrlead" />
-                                <context if="has($qrAction, &quot;Campaign&quot;)" id="qrcamp" />
-                            </input>
-                        </context>
+                        <output value=" Got you $UserName! you wanna $Action"/>
                     </input>
-                </context>
-                <context id="crlead">
-                    
-                    <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet" var="tcResponse">
-                        <header name="Content-Type" value="application/json" />
-                       <param name="userName" value="tanu dube"/>
-                        <param name="weekstartson" value="2017-08-27"/>
-                    </get>
-                    
-                    
-                    <output value="Created reminder $tcResponse" />
-                </context>
-                <context id="crcamp">
-                    <output value="Please enter short description" />
-                    <input pattern="$Text">
-                        <var name="shortdesc" value="$Text" scope="user" />
-                        <context id="detdesc" />
-                    </input>
-                </context>
-                <context id="detdesc">
-                    <output value="Please enter detail description" />
-                    <input pattern="$Text">
-                        <var name="detdesc" value="$Text" scope="user" />
-                        <context id="testowner" />
-                    </input>
-                </context>
-                <context id="testowner">
-                    <output value="Please enter test owner" />
-                    <input pattern="$Text">
-                        <var name="testowener" value="$Text" scope="user" />
-                        <context id="testprereq" />
-                    </input>
-                </context>
-                <context id="testprereq">
-                    <output value="Please enter test pre requisite" />
-                    <input pattern="$Text">
-                        <var name="testprereq" value="$Text" scope="user" />
-                        <context id="testsuite" />
-                    </input>
-                </context>
-                <context id="testsuite">
-                    <output value="Please enter test suite name" />
-                    <input pattern="$Text">
-                        <var name="testsuite" value="$Text" scope="user" />
-                        <context id="teststep" />
-                    </input>
-                </context>
-                <context id="teststep">
-                    <output value="Please enter test step name" />
-                    <input pattern="$Text">
-                        <var name="teststep" value="$Text" scope="user" />
-                        <context id="datapostmessage" />
-                    </input>
-                </context>
-                <context id="datapostmessage">
-                    <post url="https://qacentral.service-now.com/api/now/table/u_upload_test_cases" var="Response">
-                        <header name="Content-Type" value="application/json" />
-                        <header name="Authorization" value="Basic YWRtaW46YWRtaW4=" />
-                        <body><![CDATA[
-      {
-        "u_short_description" : "$shortdesc",
-        "u_detailed_description" : "$detdesc",
-        "u_owner" : "$testowener",
-        "u_prerequisites" : "$testprereq",
-        "u_test_suite"  : "$testsuite",
-        "u_test_step_name"  : "$teststep"
-      }
-    ]]></body>
-                    </post>
-                    <var name="testCaseNo" value="javascript: $Response.result.unumber"/>
-                    
-                    <output value="Created Test Case $Response -10000- $testCaseNo" />
-                </context>
-                <context id="qrlead">
-                    <!-- Does some weather gathering stuff -->
-                    <output value="Query lead $qrAction" />
-                </context>
-                <context id="qrcampgn">
-                    <!-- Does some weather gathering stuff -->
-                    <output value="Query Campaign $qrAction" />
                 </context>
             </input>
         </context>
