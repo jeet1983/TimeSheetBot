@@ -29,8 +29,14 @@
                       
                     </get>
                     <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
-                    <output value="$nsResponseresult" />
-                    <context id="sendEmail">
+                    
+                     
+                    <output>
+  <![CDATA[
+    <h3>Here is your name</h3>
+    <a href="somewebsite.com">$UserName</a>
+  ]]>
+</output>
                 </context>
                 <context id="sendEmail">
                      <item>Send Email</item>
