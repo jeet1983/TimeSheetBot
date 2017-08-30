@@ -29,15 +29,10 @@
                       
                     </get>
                     <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
-                    
-                   
-                     <output>
-                      <![CDATA[
-                        <h3>Not Submitted $nsResponseresult</h3>
-                        <h3>Enter Email to send notification email</h3>
-                      ]]>
-                    </output>
-                     <input pattern="*(email|Email|EMAIL)*">
+                    <output value="$nsResponseresult" if="eq(1,1)"/>
+                    <output value="Sent Email" if="eq(1,1)""/>
+                     
+                     <input pattern="$Text">
                         <var name="isemail" value="$Text" scope="user" />
                         <context if="has($isemail, 'Email')" id="sendEmail" />
                     </input>
