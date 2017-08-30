@@ -17,7 +17,7 @@
                         <var name="Action" value="$Text" scope="user" />
                         <output value=" Got you $UserName! you wanna $Action"/>
                         <context if="has($Action,  &quot;Submitted&quot;)" id="notsubmitted" />
-                        <context if="has($Action, 'Not Approved')" id="notapproved" />
+                        <context if="has($Action, &quot;Not Approved&quot;)" id="notapproved" />
                         <context if="has($Action, 'Pending')" id="Pending" />
                         <context if="has($Action, 'Less Than 40 hours')" id="lessthan40" />
                     </input>
