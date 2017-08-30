@@ -34,6 +34,7 @@
                      
                      <input pattern="(Email|email) *">
                         <var name="isemail" value="$Text" scope="user" />
+                          <output value="$isemail" />
                         <context if="has($isemail, 'Email')" id="sendEmail" />
                     </input>
                 </context>
