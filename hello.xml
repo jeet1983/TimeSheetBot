@@ -34,10 +34,18 @@
                       <input pattern="* Email *">
                       
                         <output value="Sending Email"/>
+                        <context  id="sendEmail" />
                      </input>
                 </context>
                 <context id="sendEmail">
-                     <item>Send Email</item>
+                      <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet" var="tcResponse">
+                        <header name="Content-Type" value="application/json" />
+                       <param name="userName" value="tanu dube"/>
+                        <param name="weekstartson" value="2017-08-27"/>
+                    </get>
+                    
+                    
+                    <output value="Created reminder $tcResponse" />
                      
                 </context>
             </input>
