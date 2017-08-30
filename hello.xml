@@ -29,17 +29,12 @@
                       
                     </get>
                     <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
-                    <output value="$nsResponseresult Enter Email to send Email to All" />
-                  
-                     
-                     <input pattern="(Email|email) *">
-                        <var name="isemail" value="$Text1" scope="user" />
-                          <output value="$isemail" />
-                        <context if="has($isemail, 'Email')" id="sendEmail" />
-                    </input>
+                    <output value="$nsResponseresult" />
+                    <context id="sendEmail">
                 </context>
                 <context id="sendEmail">
-                     <output value="Sent Email" />
+                     <item>Send Email</item>
+                     
                 </context>
             </input>
         </context>
