@@ -45,7 +45,7 @@
                     </get>
                     
                     
-                    <output value="Created reminder $tcResponse" />
+                    <output value="Sent Email $tcResponse" />
                      
                 </context>
             </input>
