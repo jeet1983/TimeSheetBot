@@ -18,7 +18,7 @@
                         <output value=" Got you $UserName! you wanna $Action"/>
                         <context if="has($Action,  &quot;Submitted&quot;)" id="notsubmitted" />
                         <context if="has($Action, &quot;Not Approved&quot;)" id="notapproved" />
-                        <context if="has($Action, &quot;Pending&quot;)" id="Pending" />
+                        <context if="has($Action, &quot;Pending&quot;)" id="pending" />
                         <context if="has($Action, &quot;Less Than 40 hours&quot;)" id="lessthan40" />
                     </input>
                 </context>
@@ -37,7 +37,7 @@
                         <context  id="sendEmail" />
                      </input>
                 </context>
-                <context id="Pending">
+                <context id="pending">
                     
                     <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet/PendingTimeSheets" var="nsResponse">
                         <header name="Content-Type" value="application/json" />
