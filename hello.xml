@@ -31,6 +31,19 @@
                     <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
                     
                     <output value="Not Submitted $nsResponseresult" />
+                     <output>
+                      <![CDATA[
+                        <h3>Not Submitted $nsResponseresult</h3>
+                        <h3>Enter Email to send notification email</h3>
+                      ]]>
+                    </output>
+                     <input pattern="*(email|Email|EMAIL)*">
+                        <var name="isemail" value="$Text" scope="user" />
+                        <context if="has($isemail, 'Email')" id="sendEmail" />
+                    </input>
+                </context>
+                <context id="sendEmail">
+                     <output value="Sent Email" />
                 </context>
             </input>
         </context>
