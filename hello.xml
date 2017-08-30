@@ -31,7 +31,10 @@
                     <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
                     
                      <output value="$nsResponseresult" />
-                      
+                       <input pattern="{$Text} *">
+                       <var name="emailAction" value="$Text" scope="user" />
+                            <output value=" $emailAction"/>
+                     </input>
                 </context>
                 <context id="sendEmail">
                      <item>Send Email</item>
