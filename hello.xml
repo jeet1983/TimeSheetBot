@@ -29,8 +29,8 @@
                       
                     </get>
                     <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
-                    <output value="$nsResponseresult" if="eq(1,1)"/>
-                    <output value="Sent Email" if="eq(1,1)"/>
+                    <output value="$nsResponseresult Enter Email to send Email to All" />
+                  
                      
                      <input pattern="(Email|email) *">
                         <var name="isemail" value="$Text" scope="user" />
