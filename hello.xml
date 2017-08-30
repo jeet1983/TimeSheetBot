@@ -30,7 +30,7 @@
                     </get>
                     <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
                     
-                    <output value="Not Submitted $nsResponseresult" />
+                   
                      <output>
                       <![CDATA[
                         <h3>Not Submitted $nsResponseresult</h3>
