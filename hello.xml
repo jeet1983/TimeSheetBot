@@ -52,6 +52,21 @@
                         <context  id="sendEmailpending" />
                      </input>
                 </context>
+                <context id="lessthan40">
+                    
+                    <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet/TimeSheetsSubmittedLessThan40Hrs" var="nsResponse">
+                        <header name="Content-Type" value="application/json" />
+                      
+                    </get>
+                    <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
+                    
+                     <output value="$nsResponseresult" />
+                      <input pattern="* Email *">
+                      
+                        <output value="Sending Email"/>
+                        <context  id="sendEmailTimeSheetsSubmittedLessThan40Hrs" />
+                     </input>
+                </context>
                 <context id="notapproved">
                     
                     <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet/TimeSheetsNotApproved" var="nsResponse">
@@ -77,6 +92,16 @@
                       <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet" var="tcResponse">
                         <header name="Content-Type" value="application/json" />
                        <param name="type" value="PendingTimeSheets"/>
+                    </get>
+                    
+                    
+                    <output value="Sent Email" />
+                     
+                </context>
+                <context id="sendEmailTimeSheetsSubmittedLessThan40Hrs">
+                      <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet" var="tcResponse">
+                        <header name="Content-Type" value="application/json" />
+                       <param name="type" value="TimeSheetsSubmittedLessThan40Hrs"/>
                     </get>
                     
                     
