@@ -30,13 +30,10 @@
                     </get>
                     <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
                     
-                     
-                    <output>
-  <![CDATA[
-    <h3>Here is your name</h3>
-    <a href="somewebsite.com">$UserName</a>
-  ]]>
-</output>
+                     <output value="$nsResponseresult" />
+                      <input pattern="Eamil *">
+                           <context id="sendEmail">
+                               </input>
                 </context>
                 <context id="sendEmail">
                      <item>Send Email</item>
