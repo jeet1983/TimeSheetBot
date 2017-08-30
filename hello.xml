@@ -1,7 +1,8 @@
 <context >
+    <context id="root">
     <input pattern="*">
         <output value="Hi There! I am Snowy, your personal Digital Assistent for SNOW TimeSheet applications. Please Enter your name?" />
-        <context id="root">
+        <context id="leaf">
             <input pattern="$Text">
                 <var name="UserName" value="$Text" scope="user" />
                 <output value="Nice to meet you $UserName!. I can help you with the following" />
@@ -15,10 +16,13 @@
                     <input pattern="{$Text} *">
                         <var name="Action" value="$Text" scope="user" />
                         <output value=" Got you $UserName! you wanna $Action"/>
-                        <context id="root" />
+                        
+                        <context if="full($UserName)" id="leaf" />
+                        <context if="empty($UserName)" id="root" />
                     </input>
                 </context>
             </input>
         </context>
     </input>
+    </context>
 </context>
