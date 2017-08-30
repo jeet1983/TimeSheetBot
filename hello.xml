@@ -16,10 +16,21 @@
                     <input pattern="{$Text} *">
                         <var name="Action" value="$Text" scope="user" />
                         <output value=" Got you $UserName! you wanna $Action"/>
-                        
-                        <context if="full($UserName)" id="leaf" />
-                        <context if="empty($UserName)" id="root" />
+                        <context if="has($Action, &Submitted;Lead&quot;)" id="notsubmitted" />
+                        <context if="has($Action, &Approved;Lead&quot;)" id="notapproved" />
+                        <context if="has($Action, &Pending;Lead&quot;)" id="Pending" />
+                        <context if="has($Action, &Pending;40&quot;)" id="lessthan40" />
                     </input>
+                </context>
+                 <context id="notsubmitted">
+                    
+                    <get url="https://qaserver.service-now.com/api/snc/botemail_timesheet/TimeSheetsNotSubmitted" var="nsResponse">
+                        <header name="Content-Type" value="application/json" />
+                      
+                    </get>
+                    
+                    
+                    <output value="Not Submitted $nsResponse" />
                 </context>
             </input>
         </context>
