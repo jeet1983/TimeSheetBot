@@ -1,11 +1,9 @@
 <context >
     
     <input pattern="*">
-        <output value="Hi There! I am Snowy, your personal Digital Assistent for SNOW TimeSheet applications. Please Enter your name?" />
-        <context id="leaf">
-            <input pattern="$Text">
-                <var name="UserName" value="$Text" scope="user" />
-                <output value="Nice to meet you $UserName!. I can help you with the following" />
+       <output value="Nice to meet you $UserName!. I can help you with the following" />
+       
+            
                 <sample>
                     <item>Nt Appv</item>
                     <item>Nt Subm</item>
@@ -15,7 +13,6 @@
                 <context>
                     <input pattern="$Text">
                         <var name="Action" value="$Text" scope="user" />
-                        <output value=" Got you $UserName! you wanna $Action"/>
                         <context if="has($Action,  &quot;Submitted&quot;)" id="notsubmitted" />
                         <context if="has($Action, &quot;Not Approved&quot;)" id="notapproved" />
                         <context if="has($Action, &quot;Pending&quot;)" id="pending" />
@@ -108,8 +105,8 @@
                     <output value="Sent Email" />
                      
                 </context>
-            </input>
-        </context>
+          
+       
            
     </input>
     
