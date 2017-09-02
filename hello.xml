@@ -7,10 +7,10 @@
                 <var name="UserName" value="$Text" scope="user" />
                 <output value="Nice to meet you $UserName!. I can help you with the following" />
                 <sample>
-                    <item>Not Approved</item>
-                    <item>Not Submitted</item>
+                    <item>Nt Appv</item>
+                    <item>Nt Subm</item>
                     <item>Pending</item>
-                    <item>Less Than 40 hours</item>
+                    <item>LT 40</item>
                 </sample>
                 <context>
                     <input pattern="$Text">
