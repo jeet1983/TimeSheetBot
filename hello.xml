@@ -2,8 +2,10 @@
     
     <input pattern="*">
        <output value="Nice to meet you $UserName!. I can help you with the following" />
-       
-            
+        <context id="leaf">
+            <input pattern="$Text">
+                <var name="UserName" value="$Text" scope="user" />
+                <output value="Nice to meet you $UserName!. I can help you with the following" />
                 <sample>
                     <item>Nt Appv</item>
                     <item>Nt Subm</item>
@@ -105,8 +107,8 @@
                     <output value="Sent Email" />
                      
                 </context>
-          
-       
+            </input>
+        </context>
            
     </input>
     
