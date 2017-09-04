@@ -29,7 +29,7 @@
                       
                     </get>
                     <var name="nsResponseresultcnt" value="javascript: $nsResponse.result.count"/>
-                     <var name="nsResponseresult" value="javascript: $nsResponse.result.obj"/>
+                     <var name="nsResponseresult" value="javascript: $nsResponse.result.arr"/>
                        <output value="There are $nsResponseresultcnt Not Submitted. $nsResponseresult" />
                       <input pattern="* Email *">
                       
@@ -44,7 +44,7 @@
                       
                     </get>
                     <var name="nsResponseresultcnt" value="javascript: $nsResponse.result.count"/>
-                    <var name="nsResponseresult" value="javascript: $nsResponse.result.obj"/>
+                    <var name="nsResponseresult" value="javascript: $nsResponse.result.arr"/>
                     
                      <output value="There are $nsResponseresultcnt Pending. $nsResponseresult" />
                       <input pattern="* Email *">
