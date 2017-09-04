@@ -28,9 +28,9 @@
                         <header name="Content-Type" value="application/json" />
                       
                     </get>
-                    <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
-                    
-                     <output value="$nsResponseresult" />
+                    <var name="nsResponseresultcnt" value="javascript: $nsResponse.result.count"/>
+                     <var name="nsResponseresult" value="javascript: $nsResponse.result.obj"/>
+                       <output value="There are $nsResponseresultcnt Not Submitted. $nsResponseresult" />
                       <input pattern="* Email *">
                       
                         <output value="Sending Email"/>
@@ -44,7 +44,7 @@
                       
                     </get>
                     <var name="nsResponseresultcnt" value="javascript: $nsResponse.result.count"/>
-                      <var name="nsResponseresult" value="javascript: $nsResponse.result.obj"/>
+                    <var name="nsResponseresult" value="javascript: $nsResponse.result.obj"/>
                     
                      <output value="There are $nsResponseresultcnt Pending. $nsResponseresult" />
                       <input pattern="* Email *">
