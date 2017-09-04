@@ -59,9 +59,10 @@
                         <header name="Content-Type" value="application/json" />
                       
                     </get>
-                    <var name="nsResponseresult" value="javascript: $nsResponse.result"/>
+                   <var name="nsResponseresultcnt" value="javascript: $nsResponse.result.count"/>
+                    <var name="nsResponseresult" value="javascript: $nsResponse.result.arr"/>
                     
-                     <output value="$nsResponseresult" />
+                       <output value="There are $nsResponseresultcnt with less than 40 hrs. $nsResponseresult" />
                       <input pattern="* Email *">
                       
                         <output value="Sending Email"/>
